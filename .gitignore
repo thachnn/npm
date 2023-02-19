@@ -1,35 +1,50 @@
-*.swp
+# Logs
+*.log
 *-debug.log*
+*-error.log*
 
+# Test coverage
+#coverage/
+#*.lcov
 .nyc_output/
 
-/test/bin
-/test/output.log
-/test/*/*/node_modules
-/test/packages/npm-test-depends-on-spark/which-spark.log
-/test/packages/test-package/random-data.txt
-/test/root
+# Output of 'npm pack'
+*.tgz
 
+# Integrity file
+.yarn-integrity
+.package-lock.json
+
+# Environment variable files
+.env
+.env.*.local
+.env.local
+
+# Cache directory
+node_modules/.cache/
 node_modules/.bin/
 
-/npmrc
-/release/
-npm-*.tgz
+# Misc.
+*.swp
+*~
+.DS_Store
+Thumbs.db
 
-node_modules/npm-registry-client/test/fixtures
-/test/fixtures/config/userconfig-with-gc
-node_modules/npm-registry-couchapp
+# IDEs and editors
+.idea/
+#*.iml
+.vscode/
 
+# Byte-compiled files
+__pycache__/
 *.pyc
+
 .jshintrc
 .eslintrc
 
-/test/npm_cache*
-node_modules/.cache/
-
-.DS_Store
-
-.vscode/
-
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
+
+# Test Executables
+#test/
+#fixtures/
