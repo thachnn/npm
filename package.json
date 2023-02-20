@@ -1,5 +1,5 @@
 {
-  "version": "6.14.18-1",
+  "version": "6.14.18-2",
   "name": "npm",
   "description": "a package manager for JavaScript",
   "keywords": [
@@ -230,6 +230,18 @@
     "worker-farm",
     "write-file-atomic"
   ],
+  "overrides": {
+    "boxen": {
+      "term-size": "^2.2.0"
+    },
+    "lock-verify": {
+      "@iarna/cli": "npm:blank-package@1.0.0"
+    },
+    "sshpk": {
+      "dashdash": "npm:blank-package@1.0.0",
+      "getpass": "npm:blank-package@1.0.0"
+    }
+  },
   "license": "Artistic-2.0",
   "engines": {
     "node": "6 >=6.2.0 || 8 || >=9.3.0"

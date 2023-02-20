@@ -124,6 +124,12 @@ testdata/
 gyp-tests.el
 run-unit-tests.sh
 
+# Dependency executable files
+**/node_modules/*/bin/
+!**/node-gyp/bin/
+**/node_modules/*/cli.js
+**/node_modules/*/bin.js
+
 # More specials
 bower.json
 *.umd.js
