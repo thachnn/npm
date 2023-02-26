@@ -86,7 +86,7 @@ tap-snapshots/
 tests/
 spec/
 fixtures/
-test.js
+node_modules/**/test.js
 tests.js
 test-node.js
 test-browser.js
@@ -138,20 +138,17 @@ scripts/
 #**/node_modules/*/cli.js
 #**/node_modules/*/bin.js
 
-# Always ignore some specific patterns within any allowed package
+# Specific patterns within any allowed package
 */**/CHANGELOG*
-changelog*
-ChangeLog*
-Changelog*
+[Cc]hange[Ll]og*
 */**/README*
-readme*
-ReadMe*
-Readme*
+[Rr]ead[Mm]e*
 */**/AUTHORS*
 */**/SECURITY*
 
 # More specials
 #.licensee.json
 #.mailmap
-#*/**/docs/
-#*/**/LICENSE*
+#**/node_modules/*/docs/
+#!LICENSE.md
+#![Ll]icense.md
