@@ -1,56 +1,157 @@
-# This file is automatically added by @npmcli/template-oss. Do not edit.
+# Logs
+*.log
+*-debug.log*
+*-error.log*
 
-# ignore everything in the root
-/*
+# Test coverage
+coverage/
+*.lcov
+.nyc_output/
+.nycrc
 
-# keep these
-!**/.gitignore
-!/.commitlintrc.js
-!/.eslintrc.js
-!/.eslintrc.local.*
-!/.gitattributes
-!/.github/
-!/.gitignore
-!/.licensee.json
-!/.mailmap
-!/.npmrc
-!/.release-please-manifest.json
-!/AUTHORS
-!/bin/
-!/CHANGELOG*
-!/CODE_OF_CONDUCT.md
-!/configure
-!/CONTRIBUTING.md
-!/DEPENDENCIES.md
-!/docs/
-!/index.js
-!/lib/
-!/LICENSE*
-!/map.js
-!/node_modules/
-/node_modules/.bin/
-/node_modules/.cache/
-!/package-lock.json
-!/package.json
-!/README*
-!/release-please-config.json
-!/scripts/
-!/SECURITY.md
-!/tap-snapshots/
-!/test/
-!/docs/
-!/smoke-tests/
-!/workspaces/
-/workspaces/*
-!/workspaces/arborist/
-!/workspaces/libnpmaccess/
-!/workspaces/libnpmdiff/
-!/workspaces/libnpmexec/
-!/workspaces/libnpmfund/
-!/workspaces/libnpmhook/
-!/workspaces/libnpmorg/
-!/workspaces/libnpmpack/
-!/workspaces/libnpmpublish/
-!/workspaces/libnpmsearch/
-!/workspaces/libnpmteam/
-!/workspaces/libnpmversion/
+# Output of 'npm pack'
+*.tgz
+
+# Integrity file
+.yarn-integrity
+.package-lock.json
+
+# Environment variable files
+.env
+.env.*.local
+.env.local
+
+# Cache directory
+**/node_modules/.cache/
+**/node_modules/.bin/
+
+# Misc.
+.DS_Store
+Thumbs.db
+
+*.swp
+*~
+*.bak
+.dir-locals*
+
+# IDEs and editors
+.idea/
+*.iml
+.vscode/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
+
+.jshintrc*
+.commitlintrc*
+.eslintrc*
+.eslintignore
+
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+DEPENDENCIES.md
+PULL_REQUEST_TEMPLATE*
+
+# Git specific files
+.github/
+*/**/.gitignore
+.gitattributes
+.gitkeep
+.gitmodules
+
+yarn.lock
+*/**/package-lock.json
+*/**/.npmignore
+.nvmrc
+.babelrc*
+
+# CI configurations
+.travis*
+appveyor.yml
+Jenkinsfile
+
+# Coding conventions
+.editorconfig
+.tm_properties
+.prettierrc*
+.jscsrc
+.jscs.json
+jsl.node.conf
+
+# Testing files
+test/
+smoke-tests/
+tap-snapshots/
+tests/
+spec/
+fixtures/
+test.js
+tests.js
+test-node.js
+test-browser.js
+benchmark/
+bench.js
+#speedtest.js
+
+karma.conf.*
+.coveralls*
+.istanbul*
+
+# Examples
+examples/
+example/
+samples/
+example.js
+example.html
+.tonic_example.js
+#samplejson/
+#**/cli-columns/color.js
+
+# Built files
+*.min.js
+*.min.map
+*.min.js.map
+*.min.d.ts
+#**/ajv/dist/
+#**/psl/dist/
+#**/qs/dist/
+#**/debug/dist/
+
+# Scripts
+Makefile
+Makefile.targ
+*.patch
+scripts/
+#**/errno/build.js
+#**/build/build.js
+#gen-changelog.sh
+
+# Testing scripts
+#testdata/
+#gyp-tests.el
+#run-unit-tests.sh
+
+# Dependency executable files
+#**/node_modules/*/bin/
+#!**/node-gyp/bin/
+#**/node_modules/*/cli.js
+#**/node_modules/*/bin.js
+
+# Always ignore some specific patterns within any allowed package
+*/**/CHANGELOG*
+changelog*
+ChangeLog*
+Changelog*
+*/**/README*
+readme*
+ReadMe*
+Readme*
+*/**/AUTHORS*
+*/**/SECURITY*
+
+# More specials
+#.licensee.json
+#.mailmap
+#*/**/docs/
+#*/**/LICENSE*
