@@ -61,8 +61,8 @@ PULL_REQUEST_TEMPLATE*
 .gitmodules
 
 yarn.lock
-*/**/package-lock.json
-*/**/.npmignore
+package-lock.json
+.npmignore
 .nvmrc
 .babelrc*
 
@@ -73,7 +73,6 @@ Jenkinsfile
 
 # Coding conventions
 .editorconfig
-.tm_properties
 .prettierrc*
 .jscsrc
 .jscs.json
@@ -103,34 +102,36 @@ examples/
 example/
 samples/
 example.js
-example.html
-.tonic_example.js
-#samplejson/
-#**/cli-columns/color.js
+#example.html
+samplejson/
+**/cli-columns/color.js
 
 # Built files
 *.min.js
 *.min.map
 *.min.js.map
 *.min.d.ts
-#**/ajv/dist/
-#**/psl/dist/
-#**/qs/dist/
+#*.d.ts
+#*.js.map
+#**/diff/dist/
 #**/debug/dist/
+**/agent-base/src/*.ts
 
 # Scripts
 Makefile
 Makefile.targ
 *.patch
 scripts/
-#**/errno/build.js
+rollup.config.*
 #**/build/build.js
 #gen-changelog.sh
 
 # Testing scripts
-#testdata/
-#gyp-tests.el
-#run-unit-tests.sh
+testdata/
+gyp-tests.el
+run-unit-tests.sh
+**/node-gyp/*_test.sh
+*.tests.ts
 
 # Dependency executable files
 #**/node_modules/*/bin/
@@ -139,16 +140,28 @@ scripts/
 #**/node_modules/*/bin.js
 
 # Specific patterns within any allowed package
-*/**/CHANGELOG*
+CHANGELOG*
 [Cc]hange[Ll]og*
+CHANGES*
+HISTORY*
+[Hh]istory*
 */**/README*
 [Rr]ead[Mm]e*
-*/**/AUTHORS*
-*/**/SECURITY*
+AUTHORS*
+SECURITY*
+
+**/node_modules/*/*.md
+!LICENSE.md
+![Ll]icense.md
+**/node_modules/*/docs/
+**/node_modules/*/man/
 
 # More specials
-#.licensee.json
-#.mailmap
-#**/node_modules/*/docs/
-#!LICENSE.md
-#![Ll]icense.md
+.licensee.json
+.mailmap
+bower.json
+*.umd.js
+equation.gif
+.flake8
+requirements_dev.txt
+**/semver/*.bnf
