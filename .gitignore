@@ -61,7 +61,7 @@ PULL_REQUEST_TEMPLATE*
 .gitmodules
 
 yarn.lock
-package-lock.json
+*/**/package-lock.json
 .npmignore
 .nvmrc
 .babelrc*
@@ -111,9 +111,9 @@ samplejson/
 *.min.map
 *.min.js.map
 *.min.d.ts
-#*.d.ts
-#*.js.map
-#**/diff/dist/
+*.d.ts
+*.js.map
+**/diff/dist/
 #**/debug/dist/
 **/agent-base/src/*.ts
 
@@ -134,10 +134,11 @@ run-unit-tests.sh
 *.tests.ts
 
 # Dependency executable files
-#**/node_modules/*/bin/
-#!**/node-gyp/bin/
-#**/node_modules/*/cli.js
-#**/node_modules/*/bin.js
+**/node_modules/*/bin/
+**/node_modules/@*/*/bin/
+!**/node-gyp/bin/
+**/node_modules/*/cli.js
+**/node_modules/*/bin.js
 
 # Specific patterns within any allowed package
 CHANGELOG*
